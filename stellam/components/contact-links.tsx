@@ -10,41 +10,26 @@ function XIcon({ className }: { className?: string }) {
   )
 }
 
-interface ContactLinksProps {
-  hidden?: boolean
-}
-
-export function ContactLinks({ hidden = false }: ContactLinksProps) {
+export function ContactLinks() {
   const links = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:your@email.com", label: "Email" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/stella-migmar-b07a18280/", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:stellamigmar@gmail.com", label: "Email" },
     { icon: Github, href: "https://github.com/st7lla", label: "GitHub" },
   ]
-
-  if (hidden) return null
 
   return (
     <div className="fixed top-6 right-6 z-40">
       <div className="flex items-center gap-3">
         {links.map(({ icon: Icon, href, label }) => (
-          <a
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
+          <a key={label} href={href} target="_blank" rel="noopener noreferrer"
             className="p-2 text-muted-foreground hover:text-primary transition-colors rounded-lg hover:bg-secondary/50"
-            aria-label={label}
-          >
+            aria-label={label}>
             <Icon className="w-5 h-5" />
           </a>
         ))}
-        
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
+        <a href="https://x.com/stellamigmar" target="_blank" rel="noopener noreferrer"
           className="p-2 text-muted-foreground hover:text-primary transition-colors rounded-lg hover:bg-secondary/50"
-          aria-label="X"
-        >
+          aria-label="X">
           <XIcon className="w-5 h-5" />
         </a>
       </div>
