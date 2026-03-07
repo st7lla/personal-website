@@ -165,14 +165,14 @@ function NavigationOverlay({
     { text: "about me", id: "about" },
     { text: "projects", id: "projects" },
     { text: "experience", id: "experience" },
-    { text: "contact", id: "contact" },
+    { text: "good reads", id: "good reads" },
   ]
 
   return (
     <Html position={[3.5, 0.5, 0]} transform distanceFactor={8}>
       <div className="flex flex-col gap-2 font-mono select-none">
-        <h1 className="text-2xl font-bold text-foreground mb-1">your name</h1>
-        <p className="text-sm text-muted-foreground mb-4">creative developer</p>
+        <h1 className="text-2xl font-bold text-foreground mb-1">stella migmar</h1>
+        <p className="text-sm text-muted-foreground mb-4">18, toronto</p>
         {navItems.map((item) => (
           <button
             key={item.id}

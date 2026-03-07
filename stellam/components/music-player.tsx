@@ -19,9 +19,9 @@ export function MusicPlayer({ isPlaying, onPlayPause }: MusicPlayerProps) {
 
   // Berlioz - Symphonie fantastique style jazz interpretation
   // Using a royalty-free jazz track URL
-  const trackUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
-  const trackName = "Reverie in Jazz"
-  const artistName = "Inspired by Berlioz"
+  const trackUrl = "/song.webm"
+  const trackName = "My Lucky Stars"
+  const artistName = "by Tupperwave"
 
   useEffect(() => {
     const audio = audioRef.current

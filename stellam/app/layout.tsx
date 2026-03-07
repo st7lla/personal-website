@@ -15,9 +15,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Your Name | Creative Developer',
-  description: 'Personal portfolio - Creative Developer & Designer',
-  generator: 'v0.app',
+  title: 'stella migmar | 18, toronto',
+  description: 'Personal portfolio',
+  
   icons: {
     icon: [
       {
