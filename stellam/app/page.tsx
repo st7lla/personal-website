@@ -63,7 +63,7 @@ export default function HomePage() {
       <MusicPlayer isPlaying={isPlaying} onPlayPause={handlePlayPause} />
 
       {/* Contact Links - Top Right */}
-      <ContactLinks />
+      <ContactLinks hidden={!!activeSection} />
 
       {/* 3D Scene - Full Screen */}
       <div className="absolute inset-0 w-full h-full">

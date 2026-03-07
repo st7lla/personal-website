@@ -2,7 +2,6 @@
 
 import { Github, Linkedin, Mail } from "lucide-react"
 
-// X (formerly Twitter) icon
 function XIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -11,15 +10,21 @@ function XIcon({ className }: { className?: string }) {
   )
 }
 
-export function ContactLinks() {
+interface ContactLinksProps {
+  hidden?: boolean
+}
+
+export function ContactLinks({ hidden = false }: ContactLinksProps) {
   const links = [
     { icon: Linkedin, href: "#", label: "LinkedIn" },
     { icon: Mail, href: "mailto:your@email.com", label: "Email" },
-    { icon: Github, href: "#", label: "GitHub" },
+    { icon: Github, href: "https://github.com/st7lla", label: "GitHub" },
   ]
 
+  if (hidden) return null
+
   return (
-    <div className="fixed top-6 right-6 z-50">
+    <div className="fixed top-6 right-6 z-40">
       <div className="flex items-center gap-3">
         {links.map(({ icon: Icon, href, label }) => (
           <a
@@ -33,7 +38,7 @@ export function ContactLinks() {
             <Icon className="w-5 h-5" />
           </a>
         ))}
-        <a
+        
           href="#"
           target="_blank"
           rel="noopener noreferrer"
