@@ -1,4 +1,10 @@
 import type { Metadata } from 'next'
+import { Great_Vibes } from 'next/font/google'
+
+const greatVibes = Great_Vibes({ weight: '400', subsets: ['latin'], variable: '--font-cursive' })
+import { Lora } from 'next/font/google'
+
+const lora = Lora({ subsets: ['latin'], variable: '--font-serif' })
 import { Space_Mono, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
@@ -43,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${greatVibes.variable} lora.variable`} className={lora.variable}>
       <body className={`${spaceMono.variable} ${playfair.variable} font-mono antialiased`}>
         {children}
         <Analytics />

@@ -50,21 +50,32 @@ export default function HomePage() {
       {/* About text overlay - right side */}
       <div className="absolute right-0 top-0 h-full w-[38%] flex flex-col justify-center pr-12 pl-4 z-10 pointer-events-none">
         <div className="pointer-events-auto">
-          <h1 className="font-mono font-bold text-2xl text-foreground mb-1">stella migmar</h1>
-          <p className="font-mono text-sm text-muted-foreground mb-6">18 · toronto</p>
+          <h1 style={{ fontFamily: "var(--font-cursive, 'Great Vibes', cursive)" }} className="text-4xl text-foreground mb-1">stella migmar</h1>
+          <p className="font-mono text-sm text-muted-foreground mb-5">18 · toronto</p>
           <p className="font-mono text-sm text-foreground/80 leading-relaxed mb-6 max-w-xs">
-            builder & tinkerer. i make things with code and hardware —
-            from robots to raspberry pi kitchen displays to maker programs for students.
-            currently interning at wealthsimple on self directed investing.
+            i build quirky tools for problems i actually care about —
+            hardware, code, or whatever it takes.
           </p>
-          <div className="flex flex-col gap-1.5">
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
-              <p className="font-mono text-xs text-muted-foreground">product intern @ wealthsimple</p>
+          <div className="flex flex-col gap-2.5">
+            <div className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse mt-1.5 shrink-0"></span>
+              <p className="font-mono text-xs text-muted-foreground">product intern @ wealthsimple — self directed investing, options &amp; margin</p>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-              <p className="font-mono text-xs text-muted-foreground">incoming mcmaster engineering, fall 2026</p>
+            <div className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 shrink-0"></span>
+              <p className="font-mono text-xs text-muted-foreground">founder, code next affiliate (toronto) — $50k grant from google, open electronics &amp; builder sessions</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/50 mt-1.5 shrink-0"></span>
+              <p className="font-mono text-xs text-muted-foreground">frc team #1310 lead — 2024 district championship winners, 100+ competing teams</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/50 mt-1.5 shrink-0"></span>
+              <p className="font-mono text-xs text-muted-foreground">apprentice, creative destruction lab</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/50 mt-1.5 shrink-0"></span>
+              <p className="font-mono text-xs text-muted-foreground">taught girls how to code as a national ambassador</p>
             </div>
           </div>
           <div className="flex gap-4 mt-8">

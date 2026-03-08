@@ -36,32 +36,32 @@ const reads = [
 
 export default function ReadsPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a14] text-white px-8 py-12 max-w-2xl mx-auto">
-      <div className="mb-10">
-        <Link href="/" className="inline-flex items-center gap-2 font-mono text-xs text-white/30 hover:text-white/70 transition-colors mb-8">
+    <main className="min-h-screen bg-background text-foreground">
+      <div className="max-w-2xl mx-auto px-8 py-16">
+        <Link href="/" className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-foreground transition-colors mb-12">
           <ArrowLeft className="w-3 h-3" /> back
         </Link>
-        <h1 className="font-mono font-bold text-2xl text-white">good reads</h1>
-        <p className="font-mono text-sm text-white/30 mt-1">things worth your time</p>
-      </div>
+        <h1 className="font-mono font-bold text-2xl text-foreground">good reads</h1>
+        <p className="font-mono text-sm text-muted-foreground mt-1 mb-10">things worth your time</p>
 
-      <div className="flex flex-col gap-3">
-        {reads.map((item, i) => (
-          <a
-            key={i}
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group border border-white/10 rounded-xl p-5 bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/20 transition-all flex items-start justify-between gap-4"
-          >
-            <div>
-              <p className="font-mono text-sm text-white font-medium group-hover:text-white/90 leading-snug">{item.title}</p>
-              <p className="font-mono text-xs text-white/30 mt-1">{item.author} · {item.platform}</p>
-              {item.note && <p className="font-mono text-xs text-white/20 mt-2 italic">{item.note}</p>}
-            </div>
-            <ExternalLink className="w-3.5 h-3.5 text-white/20 group-hover:text-white/50 transition-colors shrink-0 mt-0.5" />
-          </a>
-        ))}
+        <div className="flex flex-col gap-3">
+          {reads.map((item, i) => (
+            <a
+              key={i}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group border border-border rounded-xl p-5 bg-card hover:bg-card/80 hover:border-border/80 transition-all flex items-start justify-between gap-4"
+            >
+              <div>
+                <p className="font-mono text-sm text-foreground font-medium group-hover:text-foreground/80 leading-snug">{item.title}</p>
+                <p className="font-mono text-xs text-muted-foreground mt-1">{item.author} · {item.platform}</p>
+                {item.note && <p className="font-mono text-xs text-muted-foreground/60 mt-2 italic">{item.note}</p>}
+              </div>
+              <ExternalLink className="w-3.5 h-3.5 text-muted-foreground/40 group-hover:text-muted-foreground transition-colors shrink-0 mt-0.5" />
+            </a>
+          ))}
+        </div>
       </div>
     </main>
   )
