@@ -39,7 +39,7 @@ function MillenniumFalcon({ isPlaying, onClick, isDark }: { isPlaying: boolean; 
       <group
         ref={groupRef}
         rotation={[-0.2, -0.5, 0.05]}
-        scale={0.9}
+        scale={2.2}
         onClick={onClick}
         onPointerOver={() => { setHovered(true); document.body.style.cursor = "pointer" }}
         onPointerOut={() => { setHovered(false); document.body.style.cursor = "default" }}
@@ -156,7 +156,7 @@ export function Scene3D({ onVinylClick, isPlaying, isDark }: Scene3DProps) {
   const bgColor = isDark ? "#0a0a14" : "#e8e0d5"
 
   return (
-    <Canvas camera={{ position: [-1, 3.5, 8], fov: 42 }} shadows
+    <Canvas camera={{ position: [-1, 2.5, 5], fov: 52 }} shadows
       style={{ width:"100%", height:"100%", background: bgColor }}
       gl={{ antialias: true, alpha: false }}>
       <color attach="background" args={[bgColor]} />
@@ -166,7 +166,7 @@ export function Scene3D({ onVinylClick, isPlaying, isDark }: Scene3DProps) {
         <directionalLight position={[5, 10, 5]} intensity={isDark ? 1.5 : 2.5} castShadow color={isDark ? "#fffbe8" : "#fff0f5"} />
         <pointLight position={[-8, 5, -5]} intensity={0.8} color="#4a90d4" />
         <pointLight position={[8, 3, 3]} intensity={0.6} color="#d4a574" />
-        <group position={[-2, 0, 0]}>
+        <group position={[-1.5, -0.2, 0]}>
           <MillenniumFalcon isPlaying={isPlaying} onClick={onVinylClick} isDark={isDark} />
         </group>
         <ReflectiveFloor isDark={isDark} />
@@ -185,8 +185,8 @@ export function Scene3D({ onVinylClick, isPlaying, isDark }: Scene3DProps) {
           dampingFactor={0.04}
           rotateSpeed={0.35}
           zoomSpeed={0.4}
-          minDistance={4}
-          maxDistance={14}
+          minDistance={3}
+          maxDistance={10}
           minPolarAngle={Math.PI/5}
           maxPolarAngle={Math.PI/2.1}
         />
