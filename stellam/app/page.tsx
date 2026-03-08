@@ -35,7 +35,7 @@ export default function HomePage() {
   return (
     <main className="w-full h-screen overflow-hidden relative bg-background transition-colors duration-500">
       <ThemeToggle isDark={isDark} onToggle={handleThemeToggle} />
-      <MusicPlayer isPlaying={isPlaying} onPlayPause={handlePlayPause} />
+      <MusicPlayer isPlaying={isPlaying} onPlayPause={handlePlayPause} isDark={isDark} />
       <ContactLinks />
 
       {/* 3D Scene */}
